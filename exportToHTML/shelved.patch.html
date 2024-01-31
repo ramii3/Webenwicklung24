@@ -1,0 +1,399 @@
+<html>
+<head>
+<title>shelved.patch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+shelved.patch</font>
+</center></td></tr></table>
+<pre><span class="s0">Index: .idea/.gitignore 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/.idea/.gitignore b/.idea/.gitignore 
+new file mode 100644 
+--- /dev/null   (date 1700666190675) 
++++ b/.idea/.gitignore  (date 1700666190675) 
+@@ -0,0 +1,8 @@ 
++# Default ignored files 
++/shelf/ 
++/workspace.xml 
++# Editor-based HTTP Client requests 
++/httpRequests/ 
++# Datasource local storage ignored files 
++/dataSources/ 
++/dataSources.local.xml 
+Index: Spalte.html 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/Spalte.html b/Spalte.html 
+new file mode 100644 
+--- /dev/null   (date 1701682850450) 
++++ b/Spalte.html   (date 1701682850450) 
+@@ -0,0 +1,89 @@ 
++&lt;!doctype html&gt; 
++&lt;html lang=&quot;en&quot;&gt; 
++&lt;head&gt; 
++    &lt;meta charset=&quot;utf-8&quot;&gt; 
++    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; 
++    &lt;title&gt;Spalten&lt;/title&gt; 
++    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt; 
++    &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt; 
++    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt; 
++&lt;/head&gt; 
++ 
++&lt;body class=&quot;wrapper&quot;&gt; 
++ 
++&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt; 
++    &lt;div class=&quot;container-fluid&quot;&gt; 
++        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt; 
++            &lt;img src=&quot;06_-_WE_Logo.svg&quot; alt=&quot;Logo&quot;&gt; 
++        &lt;/a&gt; 
++        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt; 
++            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt; 
++        &lt;/button&gt; 
++        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt; 
++            &lt;ul class=&quot;navbar-nav&quot;&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Tasks&lt;/a&gt; 
++                &lt;/li&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Boards&lt;/a&gt; 
++                &lt;/li&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Spalten&lt;/a&gt; 
++                &lt;/li&gt; 
++            &lt;/ul&gt; 
++        &lt;/div&gt; 
++    &lt;/div&gt; 
++&lt;/nav&gt; 
++ 
++&lt;div class=&quot;container mt-4&quot;&gt; 
++    &lt;h1&gt;Spalten&lt;/h1&gt; 
++    &lt;div class=&quot;table-responsive&quot;&gt; 
++        &lt;table class=&quot;table table-striped table-hover&quot;&gt; 
++            &lt;thead class=&quot;table-dark&quot;&gt; 
++            &lt;tr&gt; 
++                &lt;th&gt;ID&lt;/th&gt; 
++                &lt;th&gt;Board&lt;/th&gt; 
++                &lt;th&gt;Sortid&lt;/th&gt; 
++                &lt;th&gt;Spalte&lt;/th&gt; 
++                &lt;th&gt;Spaltenbeschreibung&lt;/th&gt; 
++                &lt;th&gt;Bearbeiten&lt;/th&gt; 
++            &lt;/tr&gt; 
++            &lt;/thead&gt; 
++            &lt;tbody&gt; 
++            &lt;tr&gt; 
++                &lt;td&gt;1&lt;/td&gt; 
++                &lt;td&gt;Board 1&lt;/td&gt; 
++                &lt;td&gt;1&lt;/td&gt; 
++                &lt;td&gt;Todo&lt;/td&gt; 
++                &lt;td&gt;Description for Todo&lt;/td&gt; 
++                &lt;td&gt; 
++                    &lt;i class=&quot;fas fa-edit&quot;&gt;&lt;/i&gt; 
++                    &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt; 
++                &lt;/td&gt; 
++            &lt;/tr&gt; 
++            &lt;tr&gt; 
++                &lt;td&gt;2&lt;/td&gt; 
++                &lt;td&gt;Board 2&lt;/td&gt; 
++                &lt;td&gt;2&lt;/td&gt; 
++                &lt;td&gt;In Progress&lt;/td&gt; 
++                &lt;td&gt;Description for In Progress&lt;/td&gt; 
++                &lt;td&gt; 
++                    &lt;i class=&quot;fas fa-edit&quot;&gt;&lt;/i&gt; 
++                    &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt; 
++                &lt;/td&gt; 
++            &lt;/tr&gt; 
++            &lt;/tbody&gt; 
++        &lt;/table&gt; 
++    &lt;/div&gt; 
++&lt;/div&gt; 
++ 
++&lt;footer class=&quot;footer py-3 bg-light&quot;&gt; 
++    &lt;div class=&quot;container text-center&quot;&gt; 
++        &lt;p&gt;© Web-Entwicklung Team02 2023&lt;/p&gt; 
++        &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Impressum&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Datenschutz&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Kontakt&lt;/a&gt;&lt;/p&gt; 
++    &lt;/div&gt; 
++&lt;/footer&gt; 
++ 
++&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt; 
++&lt;/body&gt; 
++&lt;/html&gt; 
+Index: Spaltenersteller.html 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/Spaltenersteller.html b/Spaltenersteller.html 
+new file mode 100644 
+--- /dev/null   (date 1701682850465) 
++++ b/Spaltenersteller.html (date 1701682850465) 
+@@ -0,0 +1,79 @@ 
++&lt;!DOCTYPE html&gt; 
++&lt;html lang=&quot;en&quot;&gt; 
++&lt;head&gt; 
++    &lt;meta charset=&quot;UTF-8&quot;&gt; 
++    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; 
++    &lt;title&gt;Spalten erstellen&lt;/title&gt; 
++    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt; 
++    &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt; 
++    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt; 
++&lt;/head&gt; 
++ 
++ 
++&lt;body class=&quot;wrapper&quot;&gt; 
++ 
++&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt; 
++    &lt;div class=&quot;container-fluid&quot;&gt; 
++        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt; 
++            &lt;img src=&quot;06_-_WE_Logo.svg&quot; alt=&quot;Logo&quot;&gt; 
++        &lt;/a&gt; 
++        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt; 
++            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt; 
++        &lt;/button&gt; 
++        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt; 
++            &lt;ul class=&quot;navbar-nav&quot;&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Tasks&lt;/a&gt; 
++                &lt;/li&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Boards&lt;/a&gt; 
++                &lt;/li&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Spalten&lt;/a&gt; 
++                &lt;/li&gt; 
++            &lt;/ul&gt; 
++        &lt;/div&gt; 
++    &lt;/div&gt; 
++&lt;/nav&gt; 
++&lt;div class=&quot;container mt-4&quot;&gt; 
++    &lt;h1&gt;Spalten erstellen&lt;/h1&gt; 
++    &lt;div class=&quot;row&quot;&gt; 
++        &lt;div class=&quot;col-md-6&quot;&gt; 
++            &lt;form&gt; 
++                &lt;div class=&quot;mb-3&quot;&gt; 
++                    &lt;label for=&quot;spaltenBezeichnung&quot; class=&quot;form-label&quot;&gt;Spaltenbezeichnung&lt;/label&gt; 
++                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;spaltenBezeichnung&quot;&gt; 
++                &lt;/div&gt; 
++                &lt;div class=&quot;mb-3&quot;&gt; 
++                    &lt;label for=&quot;spaltenBeschreibung&quot; class=&quot;form-label&quot;&gt;Spaltenbeschreibung&lt;/label&gt; 
++                    &lt;textarea class=&quot;form-control&quot; id=&quot;spaltenBeschreibung&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt; 
++                &lt;/div&gt; 
++                &lt;div class=&quot;mb-3&quot;&gt; 
++                    &lt;label for=&quot;sortID&quot; class=&quot;form-label&quot;&gt;SortID&lt;/label&gt; 
++                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;sortID&quot;&gt; 
++                &lt;/div&gt; 
++                &lt;div class=&quot;mb-3&quot;&gt; 
++                    &lt;label for=&quot;dropdown&quot; class=&quot;form-label&quot;&gt;Dropdown-Auswahl&lt;/label&gt; 
++                    &lt;select class=&quot;form-select&quot; id=&quot;dropdown&quot;&gt; 
++                        &lt;option selected&gt;Option 1&lt;/option&gt; 
++                        &lt;option&gt;Option 2&lt;/option&gt; 
++                        &lt;option&gt;Option 3&lt;/option&gt; 
++                    &lt;/select&gt; 
++                &lt;/div&gt; 
++                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Speichern&lt;/button&gt; 
++                &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Abbrechen&lt;/button&gt; 
++            &lt;/form&gt; 
++        &lt;/div&gt; 
++    &lt;/div&gt; 
++&lt;/div&gt; 
++ 
++&lt;footer class=&quot;footer py-3 bg-light&quot;&gt; 
++    &lt;div class=&quot;container text-center&quot;&gt; 
++        &lt;p&gt;© Web-Entwicklung Team02 2023&lt;/p&gt; 
++        &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Impressum&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Datenschutz&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Kontakt&lt;/a&gt;&lt;/p&gt; 
++    &lt;/div&gt; 
++&lt;/footer&gt; 
++ 
++&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt; 
++&lt;/body&gt; 
++&lt;/html&gt; 
+\ No newline at end of file 
+Index: styles.css 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/styles.css b/styles.css 
+new file mode 100644 
+--- /dev/null   (date 1701682004575) 
++++ b/styles.css    (date 1701682004575) 
+@@ -0,0 +1,11 @@ 
++.navbar { 
++    background-color: #002060; 
++} 
++html, body { 
++    height: 100%; 
++    margin: 0; 
++} 
++ 
++.footer { 
++    flex-shrink: 0; 
++} 
+\ No newline at end of file 
+Index: Startseite.html 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/Startseite.html b/Startseite.html 
+new file mode 100644 
+--- /dev/null   (date 1701682004581) 
++++ b/Startseite.html   (date 1701682004581) 
+@@ -0,0 +1,55 @@ 
++&lt;!doctype html&gt; 
++&lt;html lang=&quot;en&quot;&gt; 
++&lt;head&gt; 
++    &lt;meta charset=&quot;utf-8&quot;&gt; 
++    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; 
++    &lt;title&gt;Kanban Board&lt;/title&gt; 
++    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN&quot; crossorigin=&quot;anonymous&quot;&gt; 
++    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt; 
++ 
++&lt;/head&gt; 
++&lt;body class=&quot;wrapper&quot;&gt; 
++ 
++&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt; 
++    &lt;div class=&quot;container-fluid&quot;&gt; 
++        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt; 
++            &lt;img src=&quot;06_-_WE_Logo.svg&quot; alt=&quot;Logo&quot;&gt; 
++        &lt;/a&gt; 
++        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt; 
++            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt; 
++        &lt;/button&gt; 
++        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt; 
++            &lt;ul class=&quot;navbar-nav&quot;&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Tasks&lt;/a&gt; 
++                &lt;/li&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Boards&lt;/a&gt; 
++                &lt;/li&gt; 
++                &lt;li class=&quot;nav-item&quot;&gt; 
++                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Spalten&lt;/a&gt; 
++                &lt;/li&gt; 
++            &lt;/ul&gt; 
++        &lt;/div&gt; 
++    &lt;/div&gt; 
++&lt;/nav&gt; 
++ 
++&lt;div class=&quot;container mt-4 content&quot;&gt; 
++    &lt;div class=&quot;card&quot;&gt; 
++        &lt;div class=&quot;card-body&quot;&gt; 
++            &lt;h5 class=&quot;card-title&quot;&gt;Tasks&lt;/h5&gt; 
++            &lt;!-- Hier können Sie weitere Card-Elemente hinzufügen --&gt; 
++        &lt;/div&gt; 
++    &lt;/div&gt; 
++&lt;/div&gt; 
++ 
++&lt;footer class=&quot;footer py-3 bg-light&quot;&gt; 
++    &lt;div class=&quot;container text-center&quot;&gt; 
++        &lt;p&gt;© Web-Entwicklung Team 2023&lt;/p&gt; 
++        &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Impressum&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Datenschutz&lt;/a&gt; | &lt;a href=&quot;#&quot;&gt;Kontakt&lt;/a&gt;&lt;/p&gt; 
++    &lt;/div&gt; 
++&lt;/footer&gt; 
++ 
++&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; 
++&lt;/body&gt; 
++&lt;/html&gt; 
+Index: .idea/webentwicklung23.iml 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/.idea/webentwicklung23.iml b/.idea/webentwicklung23.iml 
+new file mode 100644 
+--- /dev/null   (date 1700821667933) 
++++ b/.idea/webentwicklung23.iml    (date 1700821667933) 
+@@ -0,0 +1,10 @@ 
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
++&lt;module type=&quot;WEB_MODULE&quot; version=&quot;4&quot;&gt; 
++  &lt;component name=&quot;NewModuleRootManager&quot;&gt; 
++    &lt;content url=&quot;file://$MODULE_DIR$&quot; /&gt; 
++    &lt;orderEntry type=&quot;inheritedJdk&quot; /&gt; 
++    &lt;orderEntry type=&quot;sourceFolder&quot; forTests=&quot;false&quot; /&gt; 
++    &lt;orderEntry type=&quot;library&quot; name=&quot;bootstrap&quot; level=&quot;application&quot; /&gt; 
++    &lt;orderEntry type=&quot;library&quot; name=&quot;font-awesome&quot; level=&quot;application&quot; /&gt; 
++  &lt;/component&gt; 
++&lt;/module&gt; 
+\ No newline at end of file 
+Index: .idea/modules.xml 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/.idea/modules.xml b/.idea/modules.xml 
+new file mode 100644 
+--- /dev/null   (date 1700666189495) 
++++ b/.idea/modules.xml (date 1700666189495) 
+@@ -0,0 +1,8 @@ 
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
++&lt;project version=&quot;4&quot;&gt; 
++  &lt;component name=&quot;ProjectModuleManager&quot;&gt; 
++    &lt;modules&gt; 
++      &lt;module fileurl=&quot;file://$PROJECT_DIR$/.idea/webentwicklung23.iml&quot; filepath=&quot;$PROJECT_DIR$/.idea/webentwicklung23.iml&quot; /&gt; 
++    &lt;/modules&gt; 
++  &lt;/component&gt; 
++&lt;/project&gt; 
+\ No newline at end of file 
+Index: .idea/php.xml 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/.idea/php.xml b/.idea/php.xml 
+new file mode 100644 
+--- /dev/null   (date 1700666189526) 
++++ b/.idea/php.xml (date 1700666189526) 
+@@ -0,0 +1,19 @@ 
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
++&lt;project version=&quot;4&quot;&gt; 
++  &lt;component name=&quot;MessDetectorOptionsConfiguration&quot;&gt; 
++    &lt;option name=&quot;transferred&quot; value=&quot;true&quot; /&gt; 
++  &lt;/component&gt; 
++  &lt;component name=&quot;PHPCSFixerOptionsConfiguration&quot;&gt; 
++    &lt;option name=&quot;transferred&quot; value=&quot;true&quot; /&gt; 
++  &lt;/component&gt; 
++  &lt;component name=&quot;PHPCodeSnifferOptionsConfiguration&quot;&gt; 
++    &lt;option name=&quot;highlightLevel&quot; value=&quot;WARNING&quot; /&gt; 
++    &lt;option name=&quot;transferred&quot; value=&quot;true&quot; /&gt; 
++  &lt;/component&gt; 
++  &lt;component name=&quot;PhpStanOptionsConfiguration&quot;&gt; 
++    &lt;option name=&quot;transferred&quot; value=&quot;true&quot; /&gt; 
++  &lt;/component&gt; 
++  &lt;component name=&quot;PsalmOptionsConfiguration&quot;&gt; 
++    &lt;option name=&quot;transferred&quot; value=&quot;true&quot; /&gt; 
++  &lt;/component&gt; 
++&lt;/project&gt; 
+\ No newline at end of file 
+Index: .idea/vcs.xml 
+IDEA additional info: 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP 
+&lt;+&gt;UTF-8 
+=================================================================== 
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml 
+new file mode 100644 
+--- /dev/null   (date 1700666189565) 
++++ b/.idea/vcs.xml (date 1700666189565) 
+@@ -0,0 +1,7 @@ 
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
++&lt;project version=&quot;4&quot;&gt; 
++  &lt;component name=&quot;VcsDirectoryMappings&quot;&gt; 
++    &lt;mapping directory=&quot;&quot; vcs=&quot;Git&quot; /&gt; 
++    &lt;mapping directory=&quot;$PROJECT_DIR$&quot; vcs=&quot;Git&quot; /&gt; 
++  &lt;/component&gt; 
++&lt;/project&gt; 
+\ No newline at end of file 
+</span></pre>
+</body>
+</html>

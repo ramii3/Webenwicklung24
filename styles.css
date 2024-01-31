@@ -1,0 +1,20 @@
+.navbar.navbar-expand-lg {
+    background-color: #002060;
+
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    margin: 0 auto;
+}
+.content {
+    padding-bottom: 2em;
+}
+.footer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
