@@ -57,4 +57,11 @@ class Validation extends BaseConfig
 
     ];
 
+    public $boardbearbeiten = [
+        'board' => 'required',
+
+
+
+    ];
+
 }

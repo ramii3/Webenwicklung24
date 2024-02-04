@@ -27,8 +27,8 @@
                 </div>
             </div>
 
-            <label>Person:</label>
             <div>
+                <label>Person:</label>
                 <select class="form-control" id="Person" name="Person">
                     <?php for ($i = 0; $i < count($personen); $i++): ?>
                         <option value="<?php echo $personen[$i]['id'] ?>"

@@ -189,6 +189,70 @@ class Hauptcontroller extends BaseController
         return redirect()->to(base_url('/hauptcontroller/tasks'));
 
     }
+
+
+    public function getBoardersteller($id = 0, $todo = 0)
+    {
+
+        $tasksmodel = new Task_Model();
+        $data['boards'] = $tasksmodel->getBoards();
+
+
+        echo view('templates/header');
+        echo view('templates/boardersteller', $data);
+        echo view('templates/footer');
+    }
+
+
+
+
+    public function postSubmitBoard()
+    {
+
+        if ($this->validation->run($_POST, 'boardbearbeiten')) {
+            // Anlegen oder ändern
+
+            if (isset($_POST['submitBoard'])) {
+
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $this->tasksmodel->updateBoards();
+                } else {
+                    $this->tasksmodel->createBoards();
+                }
+                return redirect()->to(base_url('hauptcontroller/board'));
+
+            }
+
+            return redirect()->to(base_url('/hauptcontroller/board'));
+        } else {
+            $tasksmodel = new Task_Model();
+            $data['boards'] = $tasksmodel->getBoards();
+
+            $data['baord'] = $_POST;
+
+            // Fehlermeldungen generieren
+            $data['error'] = $this->validation->getErrors();
+
+
+            echo view('Views/templates/header', $data);
+            echo view('Views/templates/boardersteller', $data);
+            echo view('Views/templates/footer', $data);
+
+        }
+    }
+
+
+    public function postDeleteBoard($id)
+    {
+        if ($id != 0) {
+            $this->tasksmodel->deleteBoard($id);
+        }
+        return redirect()->to(base_url('/hauptcontroller/board'));
+
+    }
+
+
+
 }
 
 

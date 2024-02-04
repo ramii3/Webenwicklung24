@@ -128,6 +128,14 @@ class Task_model extends Model
     }
 
 
+    public function deleteBoard()
+    {
+        $this->tasks = $this->db->table('boards');
+        $this->tasks->where('id', $_POST['id']);
+        $this->tasks->delete();
+    }
+
+
 
     public function createTasks()
     {
@@ -167,6 +175,34 @@ class Task_model extends Model
         $this->tasks = $this->db->table('tasks');
         $this->tasks->where('id', $_POST['id']);
         $this->tasks->delete();
+    }
+
+
+
+
+    public function createBoards()
+    {
+        $this->tasks = $this->db->table('boards');
+        $this->tasks->insert(array('id' => $_POST['id'],
+            'board' => $_POST['board'],
+         ));
+    }
+
+    public function updateBoards()
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->where('id', $_POST['id']);
+        $this->tasks->update(array('personenid' => $_POST['Person'],
+            'taskartenid' => 1,
+            'spaltenid' => $_POST['Spalte'],
+            'sortid' => 1,
+            'tasks' => $_POST['Task'],
+            'erstelldatum' => '2024-01-19',
+            'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
+            'erinnerung' => $_POST['Erinnerung'],
+            'notizen' => $_POST['Notiz'],
+            'erledigt' => '0',
+            'geloescht' => '0',));
     }
 
 

@@ -72,6 +72,11 @@
             </div>
 
 
+
+
+
+
+
             <button type="submit" class="btn btn-primary" name="submitSpalte" id="submitSpalte">Speichern</button>
             <!-- Adjusted name to match your button naming convention -->
 
